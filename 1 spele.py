@@ -29,8 +29,6 @@ mansLogs.config(menu=galvenaizvele) #pievieno galvenam logam
 opcija=Menu(galvenaizvele,tearoff=False) #mazā izvēle
 galvenaizvele.add_cascade(label="Opcija",menu=opcija)
 
-opcija.add_command(label="Jauna spēle", command=reset)
-opcija.add_command(label="Iziet", command=mansLogs.quit)
 
 
 
@@ -69,6 +67,10 @@ def reset():
     return 0
 
 
+opcija.add_command(label="Jauna spēle", command=reset)
+opcija.add_command(label="Iziet", command=mansLogs.quit)
+
+
 def checkWinner():
     global checkWinner
     winner=False #ja  būs neizšķirts
@@ -85,15 +87,15 @@ def checkWinner():
 
 
 
-btn1=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn1))
-btn2=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn2))
-btn3=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn3))
-btn4=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn4))
-btn5=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn5))
-btn6=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn6))
-btn7=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn7))
-btn8=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn8))
-btn9=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn9))
+btn1=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn1),bd=10, bg='#FFB6C1')
+btn2=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn2),bd=10, bg='#CD1076')
+btn3=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn3),bd=10, bg='#FFB6C1')
+btn4=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn4),bd=10, bg='#CD1076')
+btn5=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn5),bd=10, bg='#FFB6C1')
+btn6=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn6),bd=10, bg='#CD1076')
+btn7=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn7),bd=10, bg='#FFB6C1')
+btn8=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn8),bd=10, bg='#CD1076')
+btn9=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn9),bd=10, bg='#FFB6C1')
 
 
 
