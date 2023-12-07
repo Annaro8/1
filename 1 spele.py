@@ -29,7 +29,39 @@ mansLogs.config(menu=galvenaizvele) #pievieno galvenam logam
 opcija=Menu(galvenaizvele,tearoff=False) #mazā izvēle
 galvenaizvele.add_cascade(label="Opcija",menu=opcija)
 
+#Noteikumi=Menu(galvenaizvele,tearoff=False) #mazā izvēle
+#galvenaizvele.add_cascade(label="Noteikumi",menu=opcija)
 
+def infoLogs():
+    jaunsLogs=Toplevel()
+    jaunsLogs.geometry("280x200")
+    virsraksts=Label(jaunsLogs, text="Noteikumi!  ", bg="light pink")
+   
+    
+    #not1=Label(row=1, column=1, text="feihfe")
+    virsraksts.grid(row=1, column=1)
+    cr1=Label(jaunsLogs, text="Spēlētājam ir jābūt 3 saviem simboliem"  
+                     " pēc kārtas ", bg="light pink")
+    cr1.grid(row=2, column=1)
+    cr2=Label(jaunsLogs, text="vertikāli, horizontāli vai pa diagonāli, lai vinnētu", bg="light pink")
+    cr2.grid(row=3, column=1)
+
+    cr3=Label(jaunsLogs, text="Ja neviens nedabuj 3 simbolus pēc kārtas,", bg="light pink")
+    cr3.grid(row=4, column=1)
+
+    cr4=Label(jaunsLogs, text="tad ir neizšķirts.", bg="light pink")
+    cr4.grid(row=5, column=1)
+
+
+
+    jaunsLogs.Label("uegfuf")
+    return 0
+#bg="")
+#Noteikumi=(mansLogs) 
+#mansLogs.config(menu=Noteikumi)
+#opcija2=(galvenaizvele,tearoff=False)S
+#Noteikumi.add_cascade(label="Noteikumi",menu=opcija2)
+galvenaizvele.add_command(label="Noteikumi",command=infoLogs)
 
 
 
@@ -64,11 +96,30 @@ def reset():
     btn7['text']=''
     btn8['text']=''
     btn9['text']=''
+    global winner, count, speletajsX
+    winner=False
+    count=0
+    speletajsX=True
     return 0
 
 
 opcija.add_command(label="Jauna spēle", command=reset)
 opcija.add_command(label="Iziet", command=mansLogs.quit)
+
+#Noteikumi.add_command(label="fff")
+
+
+btn1=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn1),bd=10, bg='#FFB6C1')
+btn2=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn2),bd=10, bg='#CD1076')
+btn3=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn3),bd=10, bg='#FFB6C1')
+btn4=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn4),bd=10, bg='#CD1076')
+btn5=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn5),bd=10, bg='#FFB6C1')
+btn6=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn6),bd=10, bg='#CD1076')
+btn7=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn7),bd=10, bg='#FFB6C1')
+btn8=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn8),bd=10, bg='#CD1076')
+btn9=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn9),bd=10, bg='#FFB6C1')
+
+
 
 
 def checkWinner():
@@ -85,17 +136,6 @@ def checkWinner():
         messagebox.showinfo("TicTacToe", "Neizšķirts..")
         disableButton()
 
-
-
-btn1=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn1),bd=10, bg='#FFB6C1')
-btn2=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn2),bd=10, bg='#CD1076')
-btn3=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn3),bd=10, bg='#FFB6C1')
-btn4=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn4),bd=10, bg='#CD1076')
-btn5=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn5),bd=10, bg='#FFB6C1')
-btn6=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn6),bd=10, bg='#CD1076')
-btn7=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn7),bd=10, bg='#FFB6C1')
-btn8=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn8),bd=10, bg='#CD1076')
-btn9=Button(mansLogs, text="", width=6, height=3, font=('Helvica',24),command=lambda:btnClick(btn9),bd=10, bg='#FFB6C1')
 
 
 
